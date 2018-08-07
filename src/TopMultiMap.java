@@ -11,18 +11,18 @@ public class TopMultiMap<K, V> extends TreeMap<Integer, V> {
       super(topComp);
       maxElems = maxNumberElements;
       }
-   private void findNewMinKey() {
-      int elemNum = 0;
-      for (Map.Entry<Integer, V> entry : super.entrySet())
-         if (elemNum++ < maxElems)
-            minKey = entry.getKey();
-      }
    @Override
    public V put(Integer key, V value) {
+      Runnable findNewMinKey = () -> {
+         int elemNum = 0;
+         for (Map.Entry<Integer, V> entry : super.entrySet())
+            if (elemNum++ < maxElems)
+               minKey = entry.getKey();
+         };
       if (key >= minKey) {
          super.put(key, value);
          if (size() >= maxElems)
-            findNewMinKey();
+            findNewMinKey.run();
          }
       return value;
       }
