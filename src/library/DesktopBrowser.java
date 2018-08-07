@@ -3,7 +3,7 @@
 public class DesktopBrowser {
 
    public static void main(String[] args) {
-      String url = "http://www.google.com";
+      String url = "https://dnajs.org/";
       try {
          java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
          }
