@@ -3,12 +3,20 @@
 # Run Java Snippets #
 #####################
 
+banner="Java Snippets - Run"
 projectHome=$(cd $(dirname $0); pwd)
+
+displayIntro() {
+   cd $projectHome
+   echo
+   echo $banner
+   echo $(echo $banner | sed -e "s/./=/g")
+   pwd
+   echo
+   }
 
 buildClassFiles() {
    cd $projectHome
-   pwd
-   echo
    echo "Building..."
    rm -rf build
    ls -l src/*.java
@@ -31,8 +39,6 @@ runSnippets() {
       done
    }
 
-echo
-echo "Java Snippets"
-echo "============="
+displayIntro
 buildClassFiles
 runSnippets
