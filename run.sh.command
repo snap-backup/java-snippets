@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #####################
 # Run Java Snippets #
 #####################
@@ -19,7 +19,7 @@ buildClassFiles() {
    cd $projectHome
    echo "Building..."
    rm -rf build
-   ls -l src/*.java
+   ls -o src/*.java
    javac -d build src/*.java src/library/*.java
    cp data/countries.xsd build/  #for XmlValidator, see: https://stackoverflow.com/q/16570523
    echo

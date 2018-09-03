@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 ################
 # Analyse Code #
 ################
 
 banner="Java Snippets - Static Code Analysis"
-pmdVersion=6.6.0
+pmdVersion=6.7.0
 projectHome=$(cd $(dirname $0); pwd)
 
 displayIntro() {
@@ -28,7 +28,7 @@ setupPmd() {
       pwd
       curl --location --remote-name https://github.com/pmd/pmd/releases/download/pmd_releases%2F$pmdVersion/pmd-bin-$pmdVersion.zip
       unzip pmd-bin-$pmdVersion.zip
-      ls -l
+      ls -o
       rm pmd-bin-$pmdVersion.zip
       }
    test -d $pmdFolder || downloadPmd
