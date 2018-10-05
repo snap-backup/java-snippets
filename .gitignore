@@ -1,6 +1,8 @@
 # Downloaded and generated files
-/build/
-/pmd/
+/build
+/groovy-snippets/build
+/groovy-snippets/data
+/pmd
 
 # Extraneous system files
 .DS_Store
