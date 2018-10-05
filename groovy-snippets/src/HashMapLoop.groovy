@@ -1,16 +1,14 @@
 // MIT License or WTFPL (your choice)
 
-import java.util.HashMap;
+class HashMapLoop {
 
-public class HashMapLoop {
-
-   public static void main(String[] args) {
-      HashMap<String, String> data = new HashMap<String, String>();
-      data.put("Color", "Green");
-      data.put("Size",  "Medium");
-      data.put("Speed", "Fast");
+   static void main(String[] args) {
+      HashMap<String, String> data = new HashMap<String, String>()
+      data.put("Color", "Green")
+      data.put("Size",  "Medium")
+      data.put("Speed", "Fast")
       for (String key : data.keySet())
-         System.out.println(key + " --> " + data.get(key));
+         println(key + " --> " + data.get(key))
       }
 
    }
