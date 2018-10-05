@@ -19,9 +19,9 @@ buildClassFiles() {
    cd $projectHome
    echo "Building..."
    rm -rf build
-   ls -o src/*.java
    javac -d build src/*.java src/library/*.java
-   cp data/countries.xsd build/  #for XmlValidator, see: https://stackoverflow.com/q/16570523
+   ls -1 build/*.class
+   cp data/countries.xsd build  #for XmlValidator, see: https://stackoverflow.com/q/16570523
    echo
    }
 
@@ -33,7 +33,7 @@ runSnippets() {
    for file in ../src/*.java; do
       name=$(basename $file .java)
       echo "-------------------------------------------------------"
-      echo "\$ java $name"
+      echo "$ java $name"
       java $name
       echo
       done
