@@ -2,7 +2,7 @@
 /build
 /groovy-snippets/build
 /groovy-snippets/data
-/pmd
+/static-analysis/pmd
 
 # Extraneous system files
 .DS_Store

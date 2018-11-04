@@ -4,7 +4,7 @@
 ################
 
 banner="Java Snippets - Static Code Analysis"
-pmdVersion=6.7.0
+pmdVersion=6.9.0
 projectHome=$(cd $(dirname $0); pwd)
 
 displayIntro() {
@@ -19,12 +19,13 @@ displayIntro() {
 setupPmd() {
    cd $projectHome
    echo "Setup PMD:"
-   pmdFolder=$projectHome/pmd/pmd-bin-$pmdVersion
+   source add-app-to-path.sh java
+   pmdFolder=$projectHome/static-analysis/pmd/pmd-bin-$pmdVersion
    echo $pmdFolder
    downloadPmd() {
       echo "Downloading..."
-      mkdir -p pmd
-      cd pmd
+      mkdir -p static-analysis/pmd
+      cd static-analysis/pmd
       pwd
       curl --location --remote-name https://github.com/pmd/pmd/releases/download/pmd_releases%2F$pmdVersion/pmd-bin-$pmdVersion.zip
       unzip pmd-bin-$pmdVersion.zip
@@ -36,11 +37,11 @@ setupPmd() {
    }
 
 runPmd() {
-   cd $projectHome/src
+   cd $projectHome/static-analysis
    echo "Run PMD:"
    pwd
-   report=$projectHome/pmd/report.html
-   $pmdFolder/bin/run.sh pmd -dir . -rulesets java-basic,java-design -f html > $report
+   report=$projectHome/static-analysis/report.html
+   $pmdFolder/bin/run.sh pmd -dir $projectHome/src -rulesets rule-set-good-java.xml -no-cache -f html > $report
    echo
    echo "Report:"
    echo $report
