@@ -12,6 +12,7 @@ displayIntro() {
    echo $banner
    echo $(echo $banner | sed s/./=/g)
    pwd
+   source add-app-to-path.sh java
    echo
    }
 
