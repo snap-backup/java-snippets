@@ -21,8 +21,8 @@ buildClassFiles() {
    echo "Building..."
    rm -rf build
    javac -d build src/*.java src/library/*.java
-   ls -1 build/*.class
-   cp data/countries.xsd build  #for XmlValidator, see: https://stackoverflow.com/q/16570523
+   ls -1 build/javasnippets/*.class
+   cp data/countries.xsd build/javasnippets  #for XmlValidator, see: https://stackoverflow.com/q/16570523
    echo
    }
 
@@ -35,7 +35,7 @@ runSnippets() {
       name=$(basename $file .java)
       echo "-------------------------------------------------------"
       echo "$ java $name"
-      java $name
+      java javasnippets/$name
       echo
       done
    }

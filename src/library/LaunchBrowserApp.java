@@ -1,6 +1,8 @@
 // MIT License or WTFPL (your choice)
 
-package barebonesbrowserlaunch;
+package example;
+
+import barebonesbrowserlaunch.BareBonesBrowserLaunch;
 
 public class LaunchBrowserApp {
 

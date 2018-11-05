@@ -1,5 +1,7 @@
 // MIT License or WTFPL (your choice)
 
+package javasnippets;
+
 import java.util.*;
 
 public class TopMap<K, V> extends TreeMap<Integer, V> {

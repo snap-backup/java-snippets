@@ -1,5 +1,7 @@
 // MIT License or WTFPL (your choice)
 
+package javasnippets;
+
 import java.util.*;
 
 class Pair<K, V> {

@@ -1,5 +1,7 @@
 // MIT License or WTFPL (your choice)
 
+package javasnippets;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
