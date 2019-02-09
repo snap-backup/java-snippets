@@ -19,9 +19,9 @@ displayIntro() {
 setupPmd() {
    cd $projectHome
    echo "Setup PMD:"
+   echo $pmdVersion
    source add-app-to-path.sh java
    pmdFolder=$projectHome/static-analysis/pmd/pmd-bin-$pmdVersion
-   echo $pmdVersion
    echo $pmdFolder
    downloadPmd() {
       echo "Downloading..."
@@ -43,6 +43,8 @@ runPmd() {
    pwd
    report=$projectHome/static-analysis/report.html
    $pmdFolder/bin/run.sh pmd -dir $projectHome/src -rulesets rule-set-good-java.xml -no-cache -f html > $report
+   fixPage="s|<head>|<head><style>html { font-family: system-ui; }</style>|"
+   sed -i "" "$fixPage" $report
    echo
    echo "Report:"
    echo $report
