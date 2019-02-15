@@ -8,8 +8,8 @@ class WebPageReader {
       try {
          InputStream stream = new URL(url).openStream()
          BufferedReader reader = new BufferedReader(new InputStreamReader(stream))
-         for (String s = reader.readLine(); s != null; s = reader.readLine())
-            println(s)
+         for (String line = reader.readLine(); line != null; line = reader.readLine())
+            println(line)
          reader.close()
          }
       catch (Exception e) {
