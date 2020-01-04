@@ -1,6 +1,7 @@
 #!/bin/bash
 ################
 # Analyse Code #
+# WTFPL        #
 ################
 
 banner="Java Snippets - Static Code Analysis"
@@ -20,7 +21,8 @@ setupPmd() {
    cd $projectHome
    echo "Setup PMD:"
    echo $pmdVersion
-   source add-app-to-path.sh java
+   which java || exit
+   java -version
    pmdFolder=$projectHome/static-analysis/pmd/pmd-bin-$pmdVersion
    echo $pmdFolder
    downloadPmd() {
@@ -29,9 +31,10 @@ setupPmd() {
       cd static-analysis/pmd
       pwd
       curl --location --remote-name https://github.com/pmd/pmd/releases/download/pmd_releases%2F$pmdVersion/pmd-bin-$pmdVersion.zip
+      ls -o *.zip
       unzip pmd-bin-$pmdVersion.zip
-      ls -o
       rm pmd-bin-$pmdVersion.zip
+      ls -o
       }
    test -d $pmdFolder || downloadPmd
    echo

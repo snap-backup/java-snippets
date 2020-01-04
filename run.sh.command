@@ -1,6 +1,7 @@
 #!/bin/bash
 #####################
 # Run Java Snippets #
+# WTFPL             #
 #####################
 
 banner="Java Snippets - Run"
@@ -12,7 +13,8 @@ displayIntro() {
    echo $banner
    echo $(echo $banner | sed s/./=/g)
    pwd
-   source add-app-to-path.sh java
+   which java || exit
+   java -version
    echo
    }
 

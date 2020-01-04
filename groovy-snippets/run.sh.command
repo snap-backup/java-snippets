@@ -1,6 +1,7 @@
 #!/bin/bash
 #######################
 # Run Groovy Snippets #
+# WTFPL               #
 #######################
 
 banner="Groovy Snippets - Run"
@@ -12,9 +13,11 @@ displayIntro() {
    echo $banner
    echo $(echo $banner | sed s/./=/g)
    pwd
-   source ../add-app-to-path.sh java
-   source ../add-app-to-path.sh groovy
-   groovyJar=$GROOVY_HOME/lib/$(basename $GROOVY_HOME).jar
+   which groovy || exit
+   groovy -version
+   groovyHome=$(cd $(dirname $(which groovy))/$(dirname $(readlink $(which groovy)))/../libexec; pwd)
+   groovyVersion=$(groovy -version | awk '{ print $3 }')
+   groovyJar=$groovyHome/lib/groovy-$groovyVersion.jar
    echo $groovyJar
    mkdir -p data
    cp -v ../data/* data
