@@ -8,7 +8,7 @@ import java.net.*;
 public class WebPageReader {
 
    public static void main(String[] args) {
-      String url = "https://dnajs.org/rest/book/1/";
+      String url = "https://dnajs.org/api/books/1/";
       System.out.println(url);
       try {
          InputStream stream = new URL(url).openStream();
