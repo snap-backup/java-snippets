@@ -45,7 +45,7 @@ runPmd() {
    echo "Run PMD:"
    pwd
    report=$projectHome/static-analysis/report.html
-   $pmdFolder/bin/run.sh pmd -dir $projectHome/src -rulesets rule-set-good-java.xml -no-cache -f html > $report
+   $pmdFolder/bin/run.sh pmd --dir $projectHome/src --rulesets rule-set-good-java.xml --no-cache --format html > $report
    fixPage="s|<head>|<head><style>html { font-family: system-ui; }</style>|"
    sed -i "" "$fixPage" $report
    echo
