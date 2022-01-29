@@ -12,7 +12,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.*;
 
-public class XmlWriter {
+public abstract class XmlWriter {
 
    public static void main(String[] args) {
       try {

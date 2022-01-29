@@ -33,8 +33,8 @@ public class BareBonesBrowserLaunch {
          d.getDeclaredMethod("browse", new Class[] {java.net.URI.class}).invoke(
             d.getDeclaredMethod("getDesktop").invoke(null),
             new Object[] {java.net.URI.create(url)});
-         //above code mimicks:
-         //   java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+         // Above code mimicks:
+         //    java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
          }
       catch (Exception ignore) {  //library not available or failed
          String osName = System.getProperty("os.name");
@@ -47,7 +47,7 @@ public class BareBonesBrowserLaunch {
             else if (osName.startsWith("Windows"))
                Runtime.getRuntime().exec(
                   "rundll32 url.dll,FileProtocolHandler " + url);
-            else { //assume Unix or Linux
+            else {  //assume Unix or Linux
                int b = 0;
                while (b < browsers.length && Runtime.getRuntime().exec(
                      new String[] {"which", browsers[b]}).waitFor() != 0)

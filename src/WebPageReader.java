@@ -5,7 +5,7 @@ package javasnippets;
 import java.io.*;
 import java.net.*;
 
-public class WebPageReader {
+public abstract class WebPageReader {
 
    public static void main(String[] args) {
       String url = "https://dnajs.org/api/books/1/";

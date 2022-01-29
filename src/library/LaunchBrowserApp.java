@@ -4,7 +4,7 @@ package example;
 
 import barebonesbrowserlaunch.BareBonesBrowserLaunch;
 
-public class LaunchBrowserApp {
+public abstract class LaunchBrowserApp {
 
    public static void main(String[] args) {
       String url = "https://dnajs.org/";

@@ -7,7 +7,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
 
-public class XmlReader {
+public abstract class XmlReader {
 
    static void processNode(Node node) {
       String msg = "node --> " + node.getNodeName();

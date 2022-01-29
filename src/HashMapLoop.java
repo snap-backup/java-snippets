@@ -4,7 +4,7 @@ package javasnippets;
 
 import java.util.HashMap;
 
-public class HashMapLoop {
+public abstract class HashMapLoop {
 
    public static void main(String[] args) {
       HashMap<String, String> data = new HashMap<String, String>();

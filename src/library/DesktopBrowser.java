@@ -2,7 +2,7 @@
 
 package example;
 
-public class DesktopBrowser {
+public abstract class DesktopBrowser {
 
    public static void main(String[] args) {
       String url = "https://dnajs.org/";
