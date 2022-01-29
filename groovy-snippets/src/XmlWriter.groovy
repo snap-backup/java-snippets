@@ -45,6 +45,7 @@ class XmlWriter {
          System.out.println(xmlFile.getPath())
          while (input.hasNextLine())
             System.out.println(input.nextLine())
+         input.close()
 
          }
       catch (Exception e) {

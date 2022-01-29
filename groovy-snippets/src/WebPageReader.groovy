@@ -11,6 +11,7 @@ class WebPageReader {
          for (String line = reader.readLine(); line != null; line = reader.readLine())
             println(line)
          reader.close()
+         stream.close()
          }
       catch (Exception e) {
          println(e.toString())

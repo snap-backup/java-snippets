@@ -16,6 +16,7 @@ public class WebPageReader {
          for (String line = reader.readLine(); line != null; line = reader.readLine())
             System.out.println(line);
          reader.close();
+         stream.close();
          }
       catch (Exception e) {
          System.out.println(e.toString());
