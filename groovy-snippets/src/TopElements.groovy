@@ -49,9 +49,9 @@ class TopElements<K, V> {
       islands.put(2131000, "Greenland")
       islands.put( 578000, "Madagascar")
       islands.put( 800000, "New Guinea")
-      println("Three Largest Islands:")
+      println "Three Largest Islands:"
       for (Pair<Integer, String> island : islands.getList())
-         println(island.key + " sq km - " + island.value)
+         println island.key + " sq km - " + island.value
       }
 
    }

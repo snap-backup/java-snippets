@@ -42,14 +42,14 @@ class XmlWriter {
          //Print out XML file contents
          File xmlFile = new File("output-countries.xml")
          Scanner input = new Scanner(xmlFile)
-         System.out.println(xmlFile.getPath())
+         println xmlFile.getPath()
          while (input.hasNextLine())
-            System.out.println(input.nextLine())
+            println input.nextLine()
          input.close()
 
          }
       catch (Exception e) {
-         System.out.println(e.getMessage())
+         println e.getMessage()
          }
       }
 

@@ -15,7 +15,7 @@ class XmlReader {
          msg = msg + " | attribute: " +
             node.getAttributes().item(0).getNodeName() + "=" +
             node.getAttributes().item(0).getNodeValue()
-      println(msg)  //display node information
+      println msg  //display node information
       for (Node subNode = node.getFirstChild(); subNode != null;
             subNode = subNode.getNextSibling())
          if (subNode.getNodeType() == Node.ELEMENT_NODE)
@@ -24,7 +24,7 @@ class XmlReader {
 
    static void main(String[] args) {
       File xmlFile = new File("../data/countries.xml")
-      println(xmlFile.getPath())
+      println xmlFile.getPath()
       try {
          DocumentBuilder xmlBuilder =
             DocumentBuilderFactory.newInstance().newDocumentBuilder()
@@ -32,7 +32,7 @@ class XmlReader {
          processNode(xmlDoc.getDocumentElement())
          }
       catch (Exception e) {
-         println(e.getMessage())
+         println e.getMessage()
          }
       }
 

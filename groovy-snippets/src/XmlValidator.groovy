@@ -15,12 +15,12 @@ class XmlValidator {
             XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(xsdInput)
          File xmlFile = new File("../data/countries.xml")
          schema.newValidator().validate(new StreamSource(xmlFile))
-         println(xmlFile.getPath())
-         println(new File("countries.xsd").getPath())
-         println("XML file sucessfully validated against XSD.")
+         println xmlFile.getPath()
+         println new File("countries.xsd").getPath()
+         println "XML file sucessfully validated against XSD."
          }
       catch (Exception e) {
-         println(e.getMessage())
+         println e.getMessage()
          }
       }
 

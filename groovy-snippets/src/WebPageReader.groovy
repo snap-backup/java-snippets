@@ -4,17 +4,17 @@ class WebPageReader {
 
    static void main(String[] args) {
       String url = "https://dnajs.org/api/books/1/"
-      System.out.println(url)
+      println url
       try {
          InputStream stream = new URL(url).openStream()
          BufferedReader reader = new BufferedReader(new InputStreamReader(stream))
          for (String line = reader.readLine(); line != null; line = reader.readLine())
-            println(line)
+            println line
          reader.close()
          stream.close()
          }
       catch (Exception e) {
-         println(e.toString())
+         println e.toString()
          }
       }
 

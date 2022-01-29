@@ -8,7 +8,7 @@ class HashMapLoop {
       data.put("Size",  "Medium")
       data.put("Speed", "Fast")
       for (String key : data.keySet())
-         println(key + " --> " + data.get(key))
+         println key + " --> " + data.get(key)
       }
 
    }

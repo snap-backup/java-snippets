@@ -24,9 +24,9 @@ class TopMap<K, V> extends TreeMap<Integer, V> {
       islands.put(2131000, "Greenland")
       islands.put( 578000, "Madagascar")
       islands.put( 800000, "New Guinea")
-      println("Three Largest Islands:")
+      println "Three Largest Islands:"
       for (Map.Entry<Integer, String> island : islands.entrySet())
-         println(island.getKey() + " sq km - " + island.getValue())
+         println island.getKey() + " sq km - " + island.getValue()
       }
 
    }
