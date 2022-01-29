@@ -14,7 +14,7 @@ displayIntro() {
    echo $(echo $banner | sed s/./=/g)
    pwd
    which java || exit
-   java -version
+   java --version
    echo
    }
 

@@ -22,7 +22,7 @@ setupPmd() {
    echo "Setup PMD:"
    echo $pmdVersion
    which java || exit
-   java -version
+   java --version
    pmdFolder=$projectHome/static-analysis/pmd/pmd-bin-$pmdVersion
    echo $pmdFolder
    downloadPmd() {

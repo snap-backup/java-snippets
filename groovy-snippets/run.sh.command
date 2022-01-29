@@ -14,9 +14,9 @@ displayIntro() {
    echo $(echo $banner | sed s/./=/g)
    pwd
    which groovy || exit
-   groovy -version
+   groovy --version
    groovyHome=$(cd $(dirname $(which groovy))/$(dirname $(readlink $(which groovy)))/../libexec; pwd)
-   groovyVersion=$(groovy -version | awk '{ print $3 }')
+   groovyVersion=$(groovy --version | awk '{ print $3 }')
    groovyJar=$groovyHome/lib/groovy-$groovyVersion.jar
    echo $groovyJar
    mkdir -p data
@@ -38,13 +38,13 @@ runSnippets() {
    cd $projectHome/build
    echo "Running..."
    pwd
+   java --version
    echo
    for file in ../src/*.groovy; do
       name=$(basename $file .groovy)
       echo "-------------------------------------------------------"
       echo "$ java -classpath \$groovyJar:. $name"
-      java -classpath $groovyJar:. --illegal-access=deny $name
-      # --illegal-access=deny, see: https://issues.apache.org/jira/browse/GROOVY-8339
+      java -classpath $groovyJar:. $name
       echo
       done
    }
