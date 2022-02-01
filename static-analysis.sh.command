@@ -6,6 +6,7 @@
 
 banner="Java Snippets - Static Code Analysis"
 pmdVersion=$(curl -s https://pmd.github.io | grep "Latest Version:" | awk '{ print $3 }')
+pmdDownload=https://github.com/pmd/pmd/releases/download/pmd_releases%2F$pmdVersion/pmd-bin-$pmdVersion.zip
 projectHome=$(cd $(dirname $0); pwd)
 
 displayIntro() {
@@ -21,16 +22,17 @@ setupPmd() {
    cd $projectHome
    echo "Setup PMD:"
    echo $pmdVersion
-   which java || exit
-   java --version
    pmdFolder=$projectHome/static-analysis/pmd/pmd-bin-$pmdVersion
    echo $pmdFolder
+   which java || exit
+   java --version
    downloadPmd() {
       echo "Downloading..."
+      echo $pmdDownload
       mkdir -p static-analysis/pmd
       cd static-analysis/pmd
       pwd
-      curl --location --remote-name https://github.com/pmd/pmd/releases/download/pmd_releases%2F$pmdVersion/pmd-bin-$pmdVersion.zip
+      curl --location --remote-name $pmdDownload
       ls -o *.zip
       unzip pmd-bin-$pmdVersion.zip
       rm pmd-bin-$pmdVersion.zip

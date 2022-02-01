@@ -44,7 +44,7 @@ public abstract class XmlWriter {
          xformer.setOutputProperty(OutputKeys.INDENT, "yes");
          xformer.transform(source, result);
 
-         //Print out XML file contents
+         // Print out XML file contents
          File xmlFile = new File("output-countries.xml");
          Scanner input = new Scanner(xmlFile);
          System.out.println(xmlFile.getPath());
