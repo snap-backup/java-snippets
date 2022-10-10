@@ -5,7 +5,7 @@ package example;
 public abstract class DesktopBrowser {
 
    public static void main(String[] args) {
-      String url = "https://dnajs.org/";
+      String url = "https://dna-engine.org/";
       try {
          java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
          }

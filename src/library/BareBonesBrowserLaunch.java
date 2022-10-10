@@ -10,7 +10,7 @@ import java.util.Arrays;
  * in the user's default browser.<br>
  * Supports: Mac OS X, GNU/Linux, Unix, Windows XP/Vista<br>
  * Example Usage:<code><br> &nbsp; &nbsp;
- *    String url = "https://dnajs.org/";<br> &nbsp; &nbsp;
+ *    String url = "https://dna-engine.org/";<br> &nbsp; &nbsp;
  *    BareBonesBrowserLaunch.openURL(url);<br></code>
  * Latest Version: <a href="https://centerkey.com/java/browser/">centerkey.com/java/browser</a><br>
  * Author: Dem Pilafian<br>
@@ -25,7 +25,7 @@ public class BareBonesBrowserLaunch {
 
    /**
     * Opens the specified web page in the user's default web browser
-    * @param url A web address (URL) of a web page (ex: "https://dnajs.org/")
+    * @param url A web address (URL) of a web page (ex: "https://dna-engine.org/")
     */
    public static void openURL(String url) {
       try {  //attempt to use Desktop library from JDK 1.6+ (even if on 1.5)
