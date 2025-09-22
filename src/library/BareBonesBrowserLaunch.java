@@ -13,7 +13,7 @@ import java.util.Arrays;
  *    String url = "https://dna-engine.org/";<br> &nbsp; &nbsp;
  *    BareBonesBrowserLaunch.openURL(url);<br></code>
  * Latest Version: <a href="https://centerkey.com/java/browser/">centerkey.com/java/browser</a><br>
- * Author: Dem Pilafian<br>
+ * Author: Pilaf T. Pilafian<br>
  * Public Domain Software -- Free to Use as You Like
  * @version 3.0, February 7, 2010
  */

@@ -19,7 +19,7 @@ displayIntro() {
    groovyVersion=$(groovy --version | awk '{ print $3 }')
    groovyJar=$groovyHome/lib/groovy-$groovyVersion.jar
    echo $groovyJar
-   mkdir -p data
+   mkdir -pv data
    cp -v ../data/* data
    echo
    }
