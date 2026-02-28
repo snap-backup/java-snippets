@@ -3,7 +3,7 @@
 class WebPageReader {
 
    static void main(String[] args) {
-      String url = "https://dna-engine.org/api/books/1/"
+      String url = "https://dna-dom.org/api/books/1/"
       println url
       try {
          InputStream stream = new URL(url).openStream()

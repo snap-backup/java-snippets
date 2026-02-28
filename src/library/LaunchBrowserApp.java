@@ -7,7 +7,7 @@ import barebonesbrowserlaunch.BareBonesBrowserLaunch;
 public abstract class LaunchBrowserApp {
 
    public static void main(String[] args) {
-      String url = "https://dna-engine.org/";
+      String url = "https://dna-dom.org/";
       System.out.println("Site: " + url);
       BareBonesBrowserLaunch.openURL(url);
       }
