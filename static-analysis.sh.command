@@ -39,7 +39,7 @@ setupPmd() {
       rm $pmdZipFile
       ls -o
       }
-   test -d $pmdFolder || downloadPmd
+   [ -d $pmdFolder ] || downloadPmd
    echo
    }
 
