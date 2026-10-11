@@ -5,13 +5,14 @@
 #####################
 
 banner="Java Snippets - Run"
-projectHome=$(cd $(dirname $0); pwd)
+projectHome=$(realpath $0/../..)
 
 displayIntro() {
    cd $projectHome
    echo
    echo $banner
    echo $(echo $banner | sed s/./=/g)
+   date
    pwd
    which java || exit
    java --version
